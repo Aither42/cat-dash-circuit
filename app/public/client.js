@@ -86,7 +86,7 @@ window.addEventListener('keyup',e=>{keys[e.code]=false;if(e.code==='KeyV'){voice
 document.querySelectorAll('#touch button').forEach(b=>{b.onpointerdown=e=>{b.setPointerCapture(e.pointerId);keys[b.dataset.key]=true;};b.onpointerup=b.onpointercancel=()=>keys[b.dataset.key]=false;});
 $('respawn').onclick=()=>send({type:'respawn'});
 $('itemUse').onclick=()=>{keys.KeyE=true;setTimeout(()=>keys.KeyE=false,110);};
-setInterval(()=>{if(!state?.race||current!=='hud')return;const pad=navigator.getGamepads?.()[0];let steer=(keys.ArrowRight||keys.KeyD?1:0)-(keys.ArrowLeft||keys.KeyA?1:0);if(pad&&Math.abs(pad.axes[0])>.15)steer=pad.axes[0];
+setInterval(()=>{if(!state?.race||current!=='hud')return;const pad=navigator.getGamepads?.()[0];let steer=(keys.ArrowLeft||keys.KeyA?1:0)-(keys.ArrowRight||keys.KeyD?1:0);if(pad&&Math.abs(pad.axes[0])>.15)steer=-pad.axes[0];
  send({type:'input',steer,brake:!!(keys.KeyS||keys.ArrowDown||pad?.buttons[6]?.pressed),drift:!!(keys.ShiftLeft||keys.ShiftRight||pad?.buttons[7]?.pressed),jump:!!(keys.Space||pad?.buttons[0]?.pressed),use:!!(keys.KeyE||pad?.buttons[2]?.pressed)});},50);
 setInterval(()=>voice.sample(),180);setInterval(()=>{if(ws?.readyState===1)ws.send('__ping');},10000);
 function audio(){if(!audioCtx){audioCtx=new AudioContext();audioGain=audioCtx.createGain();audioGain.gain.value=+$('gameVolume').value;audioGain.connect(audioCtx.destination);}if(audioCtx.state==='suspended')audioCtx.resume();}
