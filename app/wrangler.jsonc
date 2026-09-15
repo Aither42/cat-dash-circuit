@@ -9,7 +9,7 @@
   //
   // What you DO control is app.manifest.json. This template ships
   // `"durableObject": "Room"`, which is what gets you `env.ROOMS` in production.
-  "name": "game-slug-placeholder",
+  "name": "cat-dash-circuit",
 
   // Bundled by `bun run build` (see scripts/build.mjs). The deploy rediscovers
   // the built entry and points `main` at it itself.
@@ -26,7 +26,7 @@
     "not_found_handling": "none"
   },
 
-  "vars": { "HF_ENV": "dev", "APP_SLUG": "game-slug-placeholder" },
+  "vars": { "HF_ENV": "production", "APP_SLUG": "cat-dash-circuit" },
 
   // The room. `new_sqlite_classes` is required for a new DO class — the SQLite
   // backend is the only one available to new namespaces, and it is what makes
