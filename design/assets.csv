@@ -1,0 +1,11 @@
+id,role,type,description,size/ratio,style line ref,source
+ember,reference portrait and racer,3d,Dark fluffy Persian yellow eyes,cat-scale,festival-01,reference_media[0]
+mochi,reference portrait and racer,3d,Compact flat-faced calico,cat-scale,festival-01,reference_media[2]
+bolt,reference portrait and racer,3d,Spotted Bengal green eyes,cat-scale,festival-01,reference_media[3]
+pip,reference portrait and racer,3d,Tuxedo white socks and bib,cat-scale,festival-01,reference_media[1]
+nimbus,original racer,3d,Plush silver-blue amber eyes,cat-scale,festival-01,procedural
+suki,original racer,3d,Cream point elegant blue eyes,cat-scale,festival-01,procedural
+festival,track environment,3d,Lantern market rooftop alley tunnel shop,1400m approximate,festival-01,procedural
+items,gameplay props,3d,Tuna yarn fish shield catnip cucumber,6 props,festival-01,procedural
+sounds,feedback,audio,Synth paws skid boost collision and playful melody,web-audio,festival-01,procedural
+cover,launch art,image,Six cats racing at night market,3:2,festival-01,generate
